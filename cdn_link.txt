@@ -1,0 +1,78 @@
+<div class="elementar-content">
+			<div class="elementar-icon">
+				<span></span>
+			</div>
+			<div class="elementar-txt">
+				<span>Hello World!</span>
+			</div>
+		</div>
+		<button class="btn">click</button>
+
+
+			<!-- <footer>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footerDiv">
+					<div class="elementar-content">
+						<div class="elementar-icon">
+							<span></span>
+						</div>
+						<div class="elementar-txt">
+							<span>HAVE PROJECTS IN MIND?</span>
+						</div>
+					</div>
+
+					<h2>
+						Let’s Turn your Ideas <br />
+						into Reality
+					</h2>
+
+					<h3>
+						↳
+						<a href="biratnagar14morang@gmail.com"
+							>biratnagar14morang@gmail.com</a
+						>
+					</h3>
+				</div>
+
+				<ul class="footerList">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		</footer> -->
+
+
+
+		<header id="home">
+			<div class="container">
+				<div class="navbar">
+					<div class="logo-img">
+						<img src="/assets/img/site-logo.png" alt="" />
+					</div>
+					<div class="nav-links">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="#">Projects</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Contact</a></li>
+							<li>
+								<a href="#"
+									><div class="btn" id="contactBtn">
+										Contact Me
+									</div></a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="menuicon">
+						<i class="fas fa-bars"></i>
+					</div>
+				</div>
+			</div>
+		</header>

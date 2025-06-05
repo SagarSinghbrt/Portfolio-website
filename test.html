@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Projects Testing</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<style>
+			.active-tab {
+				border-bottom: 2px solid #fff;
+			}
+		</style>
+	</head>
+	<body class="bg-[#000] h-screen flex justify-center py-[2.8rem]">
+		<main class="px-[0.8rem] flex flex-col w-[80.8vw]">
+			<ul
+				class="flex gap-[18px] text-[#fff] w-full justify-around my-[1.8rem]"
+			>
+				<li id="all" class="active-tab text-[18px] leading-1.6">All</li>
+				<li id="visual" class="text-[18px] leading-1.6">
+					Viusal Design
+				</li>
+				<li id="development" class="text-[18px] leading-1.6">
+					Development
+				</li>
+				<li id="brand" class="text-[18px] leading-1.6">Branding</li>
+			</ul>
+
+			<div class="img-content flex flex-wrap">
+				<div class="imgDiv w-[40vw] flex-2/6">
+					<img
+						src="https://sgrsite.ct.ws/wp-content/uploads/2025/01/Portfolio-Img-1.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="imgDiv w-[40vw] flex-2/6">
+					<img
+						src="https://sgrsite.ct.ws/wp-content/uploads/2025/01/Portfolio-Img-2.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="imgDiv w-[40vw] flex-2/4">
+					<img
+						src="https://sgrsite.ct.ws/wp-content/uploads/2025/02/Porject-Imgg.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="imgDiv w-[40vw] flex-2/4">
+					<img
+						src="https://sgrsite.ct.ws/wp-content/uploads/2025/01/Portfolio-Img-4.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="imgDiv w-[40vw] flex-2/4">
+					<img
+						src="https://websitedemos.net/web-designer-portfolio-02/wp-content/uploads/sites/1513/2025/01/Project-Pic-6.png"
+						alt=""
+					/>
+				</div>
+
+				<div class="imgDiv w-[40vw] flex-2/4">
+					<img
+						src="https://sgrsite.ct.ws/wp-content/uploads/2025/01/Project-Pic.png"
+						alt=""
+					/>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const li = document.querySelectorAll("li");
+				const imgDiv = document.querySelectorAll(".imgDiv");
+
+				const arr = {
+					visual: [0, 1],
+					development: [2, 3],
+					brand: [4, 5],
+					all: [0, 1, 2, 3, 4, 5],
+				};
+
+				function showImg(catagory) {
+					imgDiv.forEach((img, index) => {
+						if (arr[catagory].includes(index)) {
+							img.style.display = "block";
+						} else {
+							img.style.display = "none";
+						}
+					});
+				}
+
+				li.forEach((liBtn) => {
+					liBtn.addEventListener("click", function () {
+						li.forEach((bnt) => {
+							bnt.classList.remove("active-tab");
+						});
+						liBtn.classList.add("active-tab");
+						showImg(liBtn.id);
+					});
+				});
+
+				showImg("all");
+			});
+		</script>
+	</body>
+</html>

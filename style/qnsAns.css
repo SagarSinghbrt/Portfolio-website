@@ -1,0 +1,59 @@
+.qnsAns-content {
+	padding: 4.8rem 0;
+	display: flex;
+}
+
+.qnsAns-content .qns-left {
+	flex-basis: 40%;
+}
+
+.qnsAns-content .qns-left h2 {
+	font-weight: 400;
+}
+
+.qnsAns-content .qns-right {
+	flex-basis: 60%;
+}
+
+.accordion-content {
+	padding: 8px 0;
+	border-bottom: 2px solid black;
+}
+
+.accordion-content .acc-icon {
+	display: flex;
+	justify-content: space-between;
+}
+
+.accordion-content span,
+.accordion-content i {
+	display: inline-block;
+	font-size: 20.08px;
+	line-height: 1.8;
+	cursor: pointer;
+}
+
+.accordion-content p {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+}
+
+.accordion-content p.active {
+	max-height: 500px; /* or something enough to show full content */
+}
+
+@media screen and (max-width: 1198px) {
+	.qnsAns-content {
+		flex-direction: column;
+	}
+
+	.qnsAns-content .qns-left {
+		flex-basis: 100%;
+		justify-content: start;
+	}
+
+	.qnsAns-content .qns-right {
+		flex-basis: 100%;
+	}
+}
