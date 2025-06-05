@@ -1,25 +1,35 @@
-// script.js this will show your footer multiple pages
 document.addEventListener("DOMContentLoaded", function () {
-	fetch("/html/header.html")
+	// Determine base path for fetch depending on current page location
+	const basePath = window.location.pathname.includes("/html/")
+		? "../html/"
+		: "html/";
+
+	fetch(basePath + "header.html")
 		.then((res) => res.text())
 		.then((data) => {
-			document.querySelector("header").innerHTML = data;
-
-			// Signal that the header is now loaded
-			document.dispatchEvent(new Event("headerLoaded"));
+			const header = document.querySelector("header");
+			if (header) {
+				header.innerHTML = data;
+				document.dispatchEvent(new Event("headerLoaded"));
+			}
 		});
 
-	fetch("/html/footer.html")
+	fetch(basePath + "footer.html")
 		.then((res) => res.text())
 		.then((data) => {
-			document.querySelector("footer").innerHTML = data;
+			const footer = document.querySelector("footer");
+			if (footer) {
+				footer.innerHTML = data;
+			}
 		});
 
-	fetch("/html/qnsAns.html")
+	fetch(basePath + "qnsAns.html")
 		.then((res) => res.text())
 		.then((data) => {
-			document.querySelector(".qnsAns-section").innerHTML = data;
-
-			document.dispatchEvent(new Event("qnsAnsLoaded"));
+			const qnsAnsSection = document.querySelector(".qnsAns-section");
+			if (qnsAnsSection) {
+				qnsAnsSection.innerHTML = data;
+				document.dispatchEvent(new Event("qnsAnsLoaded"));
+			}
 		});
 });
